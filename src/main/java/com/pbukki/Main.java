@@ -1,29 +1,45 @@
 package com.pbukki;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+
+
+        Utility1.readLarger();
+
 
         Consumer<String> cons = System.out::println;
         cons.accept("Hello");
 
-        Pair<String,Integer> pair1 = new Pair<>("A",20);
-        Pair<String,Integer> pair2 = new Pair<>("B",27);
+        Pairs1<String,Integer> pair1 = new Pairs1<>("A",20);
+        Pairs1<String,Integer> pair2 = new Pairs1<>("A",27);
 
-        Pair<String,Integer> largest = Utility.returnLarger(pair1, pair2);
-        System.out.println(largest);
-
-
-        int res = pair1.compareTo(pair2);
-        System.out.println("res: " + res);
+        List<Pairs1<String,Integer>> list = new ArrayList<>(Arrays.asList(pair1,pair2));
+//        Collections.reverse(list);
+        Collections.sort(list);
+        System.out.println(list);
 
 
+        Pairs1<String,Integer> res = Utility1.getLargerPair(pair1, pair2);
+        System.out.println(res);
 
-       boolean result =  Utility.compare(pair1, pair2);
-       System.out.println(result);
+//        Pair<String,Integer> largest = Utility.returnLarger(pair1, pair2);
+//        System.out.println(largest);
+
+
+//        int res = pair1.compareTo(pair2);
+//        System.out.println("res: " + res);
+
+
+
+//       boolean result =  Utility.compare(pair1, pair2);
+//       System.out.println(result);
 
         Utility.printDetails("Name","Vero");
 
