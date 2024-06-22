@@ -30,7 +30,7 @@ public class Box<T> extends Container1{
    There are 3 types of wildcards, unbounded, upper bounded and lower bounded
    <?> - unbounded
    <? extends Number> - works with any parameter that extends Number class(lower bounded)
-   <? super Integer> - works with parameter types that are superclass of integer(Number or Object)
+   <? super Integer> - works with parameter types that are integer or superclass of integer(Number or Object)
    public static void printBoxDetails(Box<Number> box){
 */
 
