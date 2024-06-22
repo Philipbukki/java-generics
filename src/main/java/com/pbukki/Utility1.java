@@ -25,7 +25,8 @@ public class Utility1 {
     }
 
 
-    public static <K,V extends Comparable<V> & Serializable> void readLarger() throws IOException, ClassNotFoundException {
+    public static <K,V extends Comparable<V> & Serializable> void readLarger()
+            throws IOException, ClassNotFoundException {
         String filePath = "D:\\philip\\Projects\\Generics\\src\\main\\java\\com\\pbukki\\file.txt";
 
         try(ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(
@@ -44,7 +45,8 @@ public class Utility1 {
     }
 
 
-    public static <K, V extends Comparable<V> & Serializable> void writeLarger(Pairs1<K,V> pair) throws IOException {
+    public static <K, V extends Comparable<V> & Serializable> void writeLarger(Pairs1<K,V> pair)
+            throws IOException {
         String filePath = "D:\\philip\\Projects\\Generics\\src\\main\\java\\com\\pbukki\\file.txt";
 
         try(ObjectOutputStream oos = new ObjectOutputStream(new BufferedOutputStream
